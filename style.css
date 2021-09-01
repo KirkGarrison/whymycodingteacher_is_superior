@@ -12,6 +12,8 @@ header {
     text-align: center;
     border-style: dashed;
     border-color:green;
+    font-size: 1.5em;
+    
 }
 
 .image {
@@ -36,7 +38,7 @@ body {
 }
 img {
     height: 300px;
-    width: 700px
+    width:700px
 }
 main {
     margin-top: 25px;
