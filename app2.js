@@ -1,6 +1,6 @@
-let userAnswer = prompt('Do you deal in absolutes?')
-console.log(userAnswer)
-if(userAnswer.toLowerCase() == 'no'){
+let userAnswer = prompt('Do you deal in absolutes?');
+
+if(userAnswer.toLowerCase() == 'no') {
     let url = "https://starwarsblog.starwars.com/wp-content/uploads/2019/04/claudia-master-tall-v2.jpg"
     document.write('<img src="' + url + '">')
 }
