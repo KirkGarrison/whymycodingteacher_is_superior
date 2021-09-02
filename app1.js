@@ -59,7 +59,7 @@ function userGuessingGame(){
             let userAnswer = prompt("Rate Roger's teaching by picking a number between 1 and 10");
             console.log(i)
             if (userAnswer == correctAnswer){
-                alert ('You got it right! You have ' + (numberOfAttempts - i) + ' attempts left');
+                alert ('You got it right! Roger would be proud!');
                 break;
             }
             else {
