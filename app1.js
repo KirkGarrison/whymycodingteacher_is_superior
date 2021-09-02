@@ -47,3 +47,30 @@ else {
 }
 
 }
+
+
+function userGuessingGame(){
+    let correctAnswer = 10
+    let wannaPlay = prompt('Do you want to rate Roger as a Coding teacher? (Yes or No)');
+    console.log(wannaPlay)
+    while (wannaPlay.toLowerCase() == 'yes'){
+        let numberOfAttempts = 3;
+        for (let i = 1; i <= numberOfAttempts; i++){
+            let userAnswer = prompt("Rate Roger's teaching by picking a number between 1 and 10");
+            console.log(i)
+            if (userAnswer == correctAnswer){
+                alert ('You got it right! You have ' + (numberOfAttempts - i) + ' attempts left');
+                break;
+            }
+            else {
+                if(userAnswer < correctAnswer){
+                    alert('Your answer is too low. Try Again! You have ' + (numberOfAttempts -i) + ' attempts left');
+                } else if (userAnswer > correctAnswer){
+                    alert('Your answer is too high. Try Again! You have ' + (numberOfAttempts -i) + ' attempts left');
+                }
+            }
+        }
+        wannaPlay = prompt('Do you want to rate Roger as a Coding teacher? (Yes or No)');
+    }
+}
+
