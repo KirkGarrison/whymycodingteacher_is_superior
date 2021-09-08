@@ -67,12 +67,17 @@ function writeContentToDocument(content) {
 function userGuessingGame(){
     let correctAnswer = 10
     let wannaPlay = prompt('Do you want to rate Roger as a Coding teacher? (Yes or No)');
+
     console.log(wannaPlay)
+
     while (wannaPlay.toLowerCase() === YES_STRING){
         let numberOfAttempts = 3;
+
         for (let i = 1; i <= numberOfAttempts; i++){
             let userAnswer = prompt("Rate Roger's teaching by picking a number between 1 and 10");
+
             console.log(i)
+
             if (userAnswer == correctAnswer){
                 alert ('You got it right! Roger would be proud!');
                 break;
@@ -85,6 +90,7 @@ function userGuessingGame(){
                 }
             }
         }
+
         wannaPlay = prompt('Do you want to rate Roger as a Coding teacher? (Yes or No)');
     }
 }
