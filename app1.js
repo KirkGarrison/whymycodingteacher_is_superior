@@ -51,7 +51,7 @@ function lightsaberColor() {
 }
 
 function writeImageToDocument(imgUrl, imgAlt) {
-    let tag = `<img src="{imgUrl}" alt="{imgAlt}" />`;
+    let tag = `<img src="${imgUrl}" alt="${imgAlt}" />`;
 
     writeContentToDocument(tag);
 }
