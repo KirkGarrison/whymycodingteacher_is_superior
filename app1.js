@@ -1,13 +1,16 @@
 function getUserName() {
     let userName = prompt('Please Enter your Name');
 
+    let text;
+
     if(userName.toLowerCase() === 'roger') {
-        document.write('Welcome Dark Lord ' + userName);
+        text = `Welcome Dark Lord ${userName}`;
     }
     else {
-        document.write('<h2>' + userName + '</h2>')
+        text = `<h2>${userName}</h2>`
     }
-    
+
+    document.write(text);
 }
 
 function dealinAbsolutes() {
