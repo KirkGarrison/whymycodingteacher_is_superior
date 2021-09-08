@@ -35,7 +35,7 @@ function dealInAbsolutes() {
     document.write(`<img src="{url}" alt="{alt}" />`)
 }
 
-function lightSaberColor(){
+function lightsaberColor(){
     let userAnswer = prompt('Blue or Red?');
 
     let url, alt;
