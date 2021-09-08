@@ -91,13 +91,11 @@ function userGuessingGame(){
             else {
                 if(userAnswer < correctAnswer){
                     alert('Your answer is too low. Try Again! You have ' + (numberOfAttempts -i) + ' attempts left');
-                } else if (userAnswer > correctAnswer){
+                } else {
                     alert('Your answer is too high. Try Again! You have ' + (numberOfAttempts -i) + ' attempts left');
                 }
             }
         }
-
-        wannaPlay = prompt('Do you want to rate Roger as a Coding teacher? (Yes or No)');
     }
 }
 
