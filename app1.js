@@ -75,10 +75,16 @@ function userGuessingGame(){
 
         for (let i = 1; i <= numberOfAttempts; i++){
             let userAnswer = prompt("Rate Roger's teaching by picking a number between 1 and 10");
+            let userValue = parseInt(userAnswer);
+            if (userValue !== userValue) {
+                alert('Invalid value, please try again!');
+                i--;
+                continue;
+            }
 
             console.log(i)
 
-            if (userAnswer === correctAnswer){
+            if (userValue === correctAnswer){
                 alert ('You got it right! Roger would be proud!');
                 break;
             }
