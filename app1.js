@@ -1,14 +1,3 @@
-// String
-let stringVariable = 'Roger Rocks'
-
-// Int / number
-let numberVariable = 8
-
-// Boolean
-let booleanVariable = true
-
-
-
 function getUserName() {
     let userName = prompt('Please Enter your Name');
 
