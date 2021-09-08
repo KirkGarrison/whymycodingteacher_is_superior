@@ -70,7 +70,7 @@ function userGuessingGame() {
     while (wannaPlay.toLowerCase() === YES_STRING) {
         let numberOfAttempts = 3;
 
-        for (let i = 1; i <= numberOfAttempts; i++) {
+        for (let i = 1; i < numberOfAttempts; i++) {
             let userAnswer = prompt("Rate Roger's teaching by picking a number between 1 and 10");
             let userValue = parseInt(userAnswer);
             if (userValue !== userValue) {
@@ -83,11 +83,11 @@ function userGuessingGame() {
 
             if (userValue === correctAnswer) {
                 alert('You got it right! Roger would be proud!');
-                break;
-            } else if (userAnswer < correctAnswer) {
-                alert('Your answer is too low. Try Again! You have ' + (numberOfAttempts - i) + ' attempts left');
+                return;
+            } else if (userValue < correctAnswer) {
+                alert(`Your answer is too low. Try Again! You have ${numberOfAttempts - i} attempts left`);
             } else {
-                alert('Your answer is too high. Try Again! You have ' + (numberOfAttempts - i) + ' attempts left');
+                alert(`Your answer is too high. Try Again! You have ${numberOfAttempts - i} attempts left`);
             }
         }
     }
