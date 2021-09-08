@@ -13,7 +13,7 @@ function getUserName() {
         text = `<h2>${userName}</h2>`
     }
 
-    document.write(text);
+    writeContentToDocument(text)
 }
 
 
@@ -35,6 +35,7 @@ function dealInAbsolutes() {
     writeImageToDocument(url, alt)
 }
 
+
 function lightsaberColor(){
     let userAnswer = prompt('Blue or Red?');
 
@@ -54,7 +55,12 @@ function lightsaberColor(){
 
 function writeImageToDocument(imgUrl, imgAlt) {
     let tag = `<img src="{imgUrl}" alt="{imgAlt}" />`;
-    document.write(tag);
+
+    writeContentToDocument(tag);
+}
+
+function writeContentToDocument(content) {
+    document.write(content);
 }
 
 
