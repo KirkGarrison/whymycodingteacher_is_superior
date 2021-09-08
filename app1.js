@@ -1,3 +1,6 @@
+const NO_STRING = 'no';
+const YES_STRING = 'yes';
+
 function getUserName() {
     let userName = prompt('Please Enter your Name');
 
@@ -13,10 +16,11 @@ function getUserName() {
     document.write(text);
 }
 
+
 function dealInAbsolutes() {
     let userAnswer = prompt('Do you deal in absolutes?');
 
-    if(userAnswer.toLowerCase() === 'no') {
+    if(userAnswer.toLowerCase() === NO_STRING) {
         let url = "https://starwarsblog.starwars.com/wp-content/uploads/2019/04/claudia-master-tall-v2.jpg"
         document.write('<img src="' + url + '">')
     }
@@ -45,7 +49,7 @@ function userGuessingGame(){
     let correctAnswer = 10
     let wannaPlay = prompt('Do you want to rate Roger as a Coding teacher? (Yes or No)');
     console.log(wannaPlay)
-    while (wannaPlay.toLowerCase() === 'yes'){
+    while (wannaPlay.toLowerCase() === YES_STRING){
         let numberOfAttempts = 3;
         for (let i = 1; i <= numberOfAttempts; i++){
             let userAnswer = prompt("Rate Roger's teaching by picking a number between 1 and 10");
