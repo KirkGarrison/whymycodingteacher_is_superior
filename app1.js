@@ -32,7 +32,7 @@ function dealInAbsolutes() {
         alt = "Image of Darth Maul";
     }
 
-    document.write(`<img src="{url}" alt="{alt}" />`)
+    writeImageToDocument(url, alt)
 }
 
 function lightsaberColor(){
@@ -49,7 +49,12 @@ function lightsaberColor(){
         alt = "Red Lightsaber";
     }
 
-    document.write(`<img src="{url}" alt="{alt}" />`)
+    writeImageToDocument(url, alt);
+}
+
+function writeImageToDocument(imgUrl, imgAlt) {
+    let tag = `<img src="{imgUrl}" alt="{imgAlt}" />`;
+    document.write(tag);
 }
 
 
