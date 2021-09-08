@@ -13,7 +13,7 @@ function getUserName() {
     document.write(text);
 }
 
-function dealinAbsolutes() {
+function dealInAbsolutes() {
     let userAnswer = prompt('Do you deal in absolutes?');
 
     if(userAnswer.toLowerCase() === 'no') {
