@@ -88,12 +88,11 @@ function userGuessingGame(){
                 alert ('You got it right! Roger would be proud!');
                 break;
             }
+            else if(userAnswer < correctAnswer){
+                alert('Your answer is too low. Try Again! You have ' + (numberOfAttempts -i) + ' attempts left');
+            }
             else {
-                if(userAnswer < correctAnswer){
-                    alert('Your answer is too low. Try Again! You have ' + (numberOfAttempts -i) + ' attempts left');
-                } else {
-                    alert('Your answer is too high. Try Again! You have ' + (numberOfAttempts -i) + ' attempts left');
-                }
+                alert('Your answer is too high. Try Again! You have ' + (numberOfAttempts -i) + ' attempts left');
             }
         }
     }
