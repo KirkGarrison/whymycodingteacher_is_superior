@@ -78,7 +78,7 @@ function userGuessingGame(){
 
             console.log(i)
 
-            if (userAnswer == correctAnswer){
+            if (userAnswer === correctAnswer){
                 alert ('You got it right! Roger would be proud!');
                 break;
             }
