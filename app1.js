@@ -38,15 +38,18 @@ function dealInAbsolutes() {
 function lightSaberColor(){
     let userAnswer = prompt('Blue or Red?');
 
+    let url, alt;
+
     if(userAnswer.toLowerCase() === 'blue') {
-        let url = "https://mcdn.wallpapersafari.com/medium/10/39/TwfsOy.jpg"
-        document.write('<img src="' + url + '">')
+        url = "https://mcdn.wallpapersafari.com/medium/10/39/TwfsOy.jpg";
+        alt = "Blue Lightsaber";
     }
     else {
-        let url = "https://tvovermind.com/wp-content/uploads/2018/09/like-blood-from-a-stone-750x422.jpg"
-        document.write('<img src="' + url + '">')
+        url = "https://tvovermind.com/wp-content/uploads/2018/09/like-blood-from-a-stone-750x422.jpg";
+        alt = "Red Lightsaber";
     }
 
+    document.write(`<img src="{url}" alt="{alt}" />`)
 }
 
 
