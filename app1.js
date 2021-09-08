@@ -1,7 +1,7 @@
 function getUserName() {
     let userName = prompt('Please Enter your Name');
 
-    if(userName.toLowerCase() == 'roger') {
+    if(userName.toLowerCase() === 'roger') {
         document.write('Welcome Dark Lord ' + userName);
     }
     else {
@@ -13,7 +13,7 @@ function getUserName() {
 function dealinAbsolutes() {
     let userAnswer = prompt('Do you deal in absolutes?');
 
-    if(userAnswer.toLowerCase() == 'no') {
+    if(userAnswer.toLowerCase() === 'no') {
         let url = "https://starwarsblog.starwars.com/wp-content/uploads/2019/04/claudia-master-tall-v2.jpg"
         document.write('<img src="' + url + '">')
     }
@@ -26,7 +26,7 @@ function dealinAbsolutes() {
 function lightsaberColor(){
     userAnswer = prompt('Blue or Red?');
 
-if(userAnswer.toLowerCase() == 'blue') {
+if(userAnswer.toLowerCase() === 'blue') {
     let url = "https://mcdn.wallpapersafari.com/medium/10/39/TwfsOy.jpg"
     document.write('<img src="' + url + '">')
 }
@@ -42,7 +42,7 @@ function userGuessingGame(){
     let correctAnswer = 10
     let wannaPlay = prompt('Do you want to rate Roger as a Coding teacher? (Yes or No)');
     console.log(wannaPlay)
-    while (wannaPlay.toLowerCase() == 'yes'){
+    while (wannaPlay.toLowerCase() === 'yes'){
         let numberOfAttempts = 3;
         for (let i = 1; i <= numberOfAttempts; i++){
             let userAnswer = prompt("Rate Roger's teaching by picking a number between 1 and 10");
