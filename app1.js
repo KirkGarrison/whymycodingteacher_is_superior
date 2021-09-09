@@ -1,76 +1,95 @@
-// String
-let stringVariable = 'Roger Rocks'
-
-// Int / number
-let numberVariable = 8
-
-// Boolean
-let booleanVariable = true
-
-
+const NO_STRING = 'no';
+const YES_STRING = 'yes';
 
 function getUserName() {
     let userName = prompt('Please Enter your Name');
 
-    if(userName.toLowerCase() == 'roger') {
-        document.write('Welcome Dark Lord ' + userName);
+    let text;
+
+    if (userName.toLowerCase() === 'roger') {
+        text = `Welcome Dark Lord ${userName}`;
+    } else {
+        text = `<h2>${userName}</h2>`
     }
-    else {
-        document.write('<h2>' + userName + '</h2>')
-    }
-    
+
+    writeContentToDocument(text)
 }
 
-function dealinAbsolutes() {
+
+function dealInAbsolutes() {
     let userAnswer = prompt('Do you deal in absolutes?');
 
-    if(userAnswer.toLowerCase() == 'no') {
-        let url = "https://starwarsblog.starwars.com/wp-content/uploads/2019/04/claudia-master-tall-v2.jpg"
-        document.write('<img src="' + url + '">')
+    let url;
+    let alt;
+
+    if (userAnswer.toLowerCase() === NO_STRING) {
+        url = "https://starwarsblog.starwars.com/wp-content/uploads/2019/04/claudia-master-tall-v2.jpg";
+        alt = "Image of Jedi Claudia";
+    } else {
+        url = "https://cdn.vox-cdn.com/thumbor/4NeV5hN3hsEwOLwgRWUmNeQwaVg=/0x0:1280x720/920x613/filters:focal(538x258:742x462):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/67764969/raypark.0.jpg";
+        alt = "Image of Darth Maul";
     }
-    else {
-        let url = "https://cdn.vox-cdn.com/thumbor/4NeV5hN3hsEwOLwgRWUmNeQwaVg=/0x0:1280x720/920x613/filters:focal(538x258:742x462):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/67764969/raypark.0.jpg"
-        document.write('<img src="' + url + '">')
+
+    writeImageToDocument(url, alt)
+}
+
+
+function lightsaberColor() {
+    let userAnswer = prompt('Blue or Red?');
+
+    let url, alt;
+
+    if (userAnswer.toLowerCase() === 'blue') {
+        url = "https://mcdn.wallpapersafari.com/medium/10/39/TwfsOy.jpg";
+        alt = "Blue Lightsaber";
+    } else {
+        url = "https://tvovermind.com/wp-content/uploads/2018/09/like-blood-from-a-stone-750x422.jpg";
+        alt = "Red Lightsaber";
     }
+
+    writeImageToDocument(url, alt);
 }
 
-function lightsaberColor(){
-    userAnswer = prompt('Blue or Red?');
+function writeImageToDocument(imgUrl, imgAlt) {
+    let tag = `<img src="${imgUrl}" alt="${imgAlt}" />`;
 
-if(userAnswer.toLowerCase() == 'blue') {
-    let url = "https://mcdn.wallpapersafari.com/medium/10/39/TwfsOy.jpg"
-    document.write('<img src="' + url + '">')
-}
-else {
-    let url = "https://tvovermind.com/wp-content/uploads/2018/09/like-blood-from-a-stone-750x422.jpg"
-    document.write('<img src="' + url + '">')
+    writeContentToDocument(tag);
 }
 
+function writeContentToDocument(content) {
+    document.write(content);
 }
 
 
-function userGuessingGame(){
+function userGuessingGame() {
     let correctAnswer = 10
     let wannaPlay = prompt('Do you want to rate Roger as a Coding teacher? (Yes or No)');
+
     console.log(wannaPlay)
-    while (wannaPlay.toLowerCase() == 'yes'){
+
+    while (wannaPlay.toLowerCase() === YES_STRING) {
         let numberOfAttempts = 3;
-        for (let i = 1; i <= numberOfAttempts; i++){
+
+        for (let i = 1; i < numberOfAttempts; i++) {
             let userAnswer = prompt("Rate Roger's teaching by picking a number between 1 and 10");
-            console.log(i)
-            if (userAnswer == correctAnswer){
-                alert ('You got it right! Roger would be proud!');
-                break;
+            let userValue = parseInt(userAnswer);
+            if (userValue !== userValue) {
+                alert('Invalid value, please try again!');
+                i--;
+                continue;
             }
-            else {
-                if(userAnswer < correctAnswer){
-                    alert('Your answer is too low. Try Again! You have ' + (numberOfAttempts -i) + ' attempts left');
-                } else if (userAnswer > correctAnswer){
-                    alert('Your answer is too high. Try Again! You have ' + (numberOfAttempts -i) + ' attempts left');
-                }
+
+            console.log(i)
+
+            if (userValue === correctAnswer) {
+                alert('You got it right! Roger would be proud!');
+                return;
+            } else if (userValue < correctAnswer) {
+                alert(`Your answer is too low. Try Again! You have ${numberOfAttempts - i} attempts left`);
+            } else {
+                alert(`Your answer is too high. Try Again! You have ${numberOfAttempts - i} attempts left`);
             }
         }
-        wannaPlay = prompt('Do you want to rate Roger as a Coding teacher? (Yes or No)');
     }
 }
 
