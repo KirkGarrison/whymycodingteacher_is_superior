@@ -8,7 +8,7 @@ header, footer, section, nav, li {
 
 header {
     background-color:azure;
-    color: blue;
+    color:orange;
     text-align: center;
     border-style: dashed;
     border-color:green;
@@ -45,9 +45,9 @@ main {
     border-style: dotted;
 }
 #section1 {
-background-color: green;
-}
-#section2 {
-    background-color: red;
-    color:white;
+    background-color: green;
+    }
+    #section2 {
+        background-color: red;
+        color:white;
 }
